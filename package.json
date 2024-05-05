@@ -3,6 +3,12 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "portofolio": "pnpm --filter portfolio run dev",
+    "next": "pnpm --filter next run dev",
+    "springboot": "pnpm --filter springboot run dev",
+    "angula": "pnpm --filter angula run dev",
+    "prisma": "pnpm --filter docs run dev",
+    "sequelize": "pnpm --filter docs run dev",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -10,11 +16,45 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "autoprefixer": "^10.4.19",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "tsx": "^4.9.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chart.js": "^4.4.2",
+    "cloudinary": "^2.2.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "html2pdf.js": "^0.10.1",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.9.13",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
+    "sendgrid": "^5.2.3",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2",
+    "svelte-chartjs": "^3.1.5",
+    "svelte-email": "^0.0.4",
+    "svelte-table": "^0.6.3",
+    "svelte-toasts": "^1.1.2",
+    "uuid": "^9.0.1",
+    "zod": "^3.23.6"
   }
 }
