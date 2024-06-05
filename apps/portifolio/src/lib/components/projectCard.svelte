@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SliceText } from '$lib/helper/sliceText';
-
+	import pictures from '../assets/myPic.jpg';
 	export let cardData: {
 		title: string;
 		picture: string;
@@ -17,20 +17,29 @@
 </script>
 
 <div
-	class="card-container w-[18rem] h-[27rem] min-h-fit bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+	class="card-container z-0 w-[18rem] h-[27rem] min-h-fit bg-black text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-500 ease-in-out relative group"
 >
-	<div class="w-full h-[50%]">
-		<img class="w-full h-full object-cover" src={picture} alt={title} />
+	<div class="h-full">
+		<img
+			class="w-full h-full object-cover transition duration-500 ease-in-out group-hover:blur-md group-hover:grayscale"
+			src={pictures}
+			alt={title}
+		/>
 	</div>
-	<div class="p-4">
-		<h1 class="text-xl font-semibold text-gray-800 mb-2">{tit}</h1>
-		<p class="text-sm text-gray-600 mb-2">{desc}</p>
+	<div class="p-4 hidden group-hover:block inset-0 absolute bg-black bg-opacity-70">
+		<div
+			class="transition-transform transform group-hover:translate group-hover:scale-110 duration-500 ease-in-out"
+		>
+			content
+		</div>
+		<h1 class="text-xl font-semibold mb-2">{tit}</h1>
+		<p class="text-sm mb-2">{desc}</p>
 		<div class="flex items-center mb-2">
 			<span class="text-yellow-500 mr-1">
 				{Array.from({ length: Math.round(ratings) }, (_, index) => '★')}
 				{Array.from({ length: 5 - Math.round(ratings) }, (_, index) => '☆')}
 			</span>
-			<span class="text-gray-600">{ratings}/5</span>
+			<span class="">{ratings}/5</span>
 		</div>
 		<div class="flex flex-wrap">
 			{#each tags as tag}
