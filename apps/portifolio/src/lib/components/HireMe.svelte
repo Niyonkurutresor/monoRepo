@@ -4,7 +4,7 @@
 
 <section class="mt-[10vh] lg:mt-[15vh] w-full">
 	<div class="mt-[10vh] w-full">
-		<h1 class="text-4xl xl:text-6xl font-bold w-fit mx-auto mb-8">Hire Me</h1>
+		<h1 class="text-4xl xl:text-6xl font-bold w-fit mx-auto mb-8">Offerings</h1>
 		<div class="px-8 py-8 w-full bg-gradient-to-tr rounded-lg">
 			<div class="w-full mx-auto text-center">
 				<p class="text-lg">

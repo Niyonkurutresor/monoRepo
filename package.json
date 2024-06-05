@@ -63,6 +63,7 @@
     "svelte-email": "^0.0.4",
     "svelte-table": "^0.6.3",
     "svelte-toasts": "^1.1.2",
+    "tippy.js": "^6.3.7",
     "uuid": "^9.0.1"
   }
 }

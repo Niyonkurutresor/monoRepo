@@ -7,14 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-model User{
-  id String @id @default(uuid())
-  name String 
-  email String @unique
+model User {
+  id       String  @id @default(uuid())
+  name     String
+  email    String  @unique
   location String?
   password String
-  type String @default("65432345")
-  picture String?
+  type     String  @default("65432345")
+  picture  String?
 }
 
+model ContactMe {
+  id      String @id @default(uuid())
+  name    String
+  email   String
+  message String
+}

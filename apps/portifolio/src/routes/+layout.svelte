@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mt-[6vh] lg:mt-[10vh] w-full h-fit">
+	<div class="mt-[6vh] lg:mt-[10vh] w-full h-full">
 		<slot />
 	</div>
 </div>

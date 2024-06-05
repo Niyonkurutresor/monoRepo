@@ -13,7 +13,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"generate": "prisma migrate dev --name migration"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -42,6 +43,7 @@
 	"dependencies": {
 		"@prisma/client": "^5.13.0",
 		"prisma": "^5.13.0",
-		"svelte-feather-icons": "^4.1.0"
+		"svelte-feather-icons": "^4.1.0",
+		"tippy.js": "^6.3.7"
 	}
 }

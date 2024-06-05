@@ -21,11 +21,12 @@
 	</ul>
 
 	<div class=" flex gap-4 text-lg font-semibold">
-		<button
+		<a
+			href="/login"
 			class=" w-fit px-4 py-1 border-blue-500 border-[2px] rounded-lg hover:bg-gradient-to-tl hover:from-blue-300 hover:to-blue-500 duration-300"
 		>
 			Sign in
-		</button>
+		</a>
 
 		<Button>Hire me</Button>
 	</div>
