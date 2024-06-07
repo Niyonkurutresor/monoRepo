@@ -9,14 +9,41 @@
 	import AboutMe from '$lib/components/about.svelte';
 	import { contactMeSchema } from '$lib/schema/contactMe';
 	import { zod } from 'sveltekit-superforms/adapters';
-	import { superForm } from 'sveltekit-superforms/client';
+	import { message, superForm } from 'sveltekit-superforms/client';
 	export let data: PageData;
 	const { form, errors, enhance, constraints, reset } = superForm(data.form, {
 		id: 'checkout-payment',
 		taintedMessage: 'Your data are not saved.',
 		validators: zod(contactMeSchema),
-		validationMethod: 'oninput'
+		validationMethod: 'oninput',
+		onSubmit: (data) => {
+			const allErrorsUndefined = Object.values($errors).every((error) => error === undefined);
+			if (allErrorsUndefined) {
+				snapshot.restore({
+					message: undefined,
+					name: undefined,
+					email: undefined
+				});
+			}
+		}
 	});
+
+	export const snapshot = {
+		capture: () => {
+			return $form;
+		},
+		restore: (state: { message: string; name: string; email: string }) => {
+			$form = state;
+		}
+	};
+
+	function clearFrom() {
+		snapshot.restore({
+			message: undefined,
+			name: undefined,
+			email: undefined
+		});
+	}
 </script>
 
 <div class=" h-fit mb-[10vh] w-full">
@@ -103,13 +130,21 @@
 							<p class="w-fit italic text-red-500">{$errors?.message}</p>
 						{/if}
 					</div>
-
-					<button
-						class="bg-blue-500 hover:bg-blue-700 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-						type="submit"
-					>
-						Submit
-					</button>
+					<div class=" flex justify-between items-center">
+						<button
+							class="bg-blue-500 hover:bg-blue-700 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							type="submit"
+						>
+							Submit
+						</button>
+						<button
+							class="bg-gray-500 hover:bg-gray-700 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							type="button"
+							on:click={clearFrom}
+						>
+							Clear
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>
