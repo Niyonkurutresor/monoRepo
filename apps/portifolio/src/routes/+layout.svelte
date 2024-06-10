@@ -20,9 +20,9 @@
 	<div class={` absolute top-0 w-full h-fit `}>
 		<div
 			bind:this={topBar}
-			class={` fixed h-[6vh] lg:py-0 lg:h-[10vh] flex justify-between items-center w-full`}
+			class={` text-white fixed h-[6vh] lg:py-0 lg:h-[10vh] flex justify-between items-center w-full`}
 		>
-			<div class="absolute bg-white z-0 w-full h-full"></div>
+			<div class="absolute bg-black z-0 w-full h-full"></div>
 			<div class=" z-10 w-full h-full flex justify-between items-center px-4">
 				<span> Logo </span>
 				<Navigation />
