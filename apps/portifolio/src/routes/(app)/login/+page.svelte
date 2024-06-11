@@ -6,7 +6,11 @@
 	export let data: PageData;
 	const { form, errors, enhance, constraints, reset } = superForm(data.form, {
 		taintedMessage: 'Your data are not saved.',
-		validators: zod(loginSchema)
+		validators: zod(loginSchema),
+
+		onSubmit: () => {
+			console.log('the data are submited.');
+		}
 	});
 </script>
 
