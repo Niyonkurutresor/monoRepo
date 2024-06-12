@@ -10,6 +10,10 @@
 
 		onSubmit: () => {
 			console.log('the data are submited.');
+		},
+
+		onError: () => {
+			console.log('somethign went wrong with the form.');
 		}
 	});
 </script>
