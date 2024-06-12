@@ -18,7 +18,7 @@
 	});
 </script>
 
-<section class=" h-full w-full bg-red-600">
+<section class=" h-full w-full">
 	<form
 		method="post"
 		action="/login/?/login"
