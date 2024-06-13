@@ -13,7 +13,7 @@
 		},
 
 		onError: () => {
-			console.log('somethign went wrong with the form.');
+			console.log('somethign went wrong with the form. Try again');
 		}
 	});
 </script>
