@@ -26,9 +26,9 @@
 		class="max-w-md mx-auto my-auto shadow-md py-4 px-3"
 	>
 		<div class="mb-4">
-			<label class="block text-gray-700 text-sm font-bold mb-2" for="email"> Email: </label>
+			<label class="block text-gray-600 text-sm font-bold mb-2" for="email"> Email: </label>
 			<input
-				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
 				type="email"
 				name="email"
 				bind:value={$form.email}
@@ -42,7 +42,7 @@
 		<div class="mb-4">
 			<label class="block text-gray-700 text-sm font-bold mb-2" for="email"> Password: </label>
 			<input
-				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
 				type="password"
 				name="password"
 				bind:value={$form.passwordd}
