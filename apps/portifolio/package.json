@@ -42,9 +42,12 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^5.13.0",
+		"intersection-observer": "^0.12.2",
 		"nodemailer": "^6.9.13",
 		"prisma": "^5.13.0",
 		"svelte-feather-icons": "^4.1.0",
+		"svelte-intersection-observer": "^1.0.0",
+		"svelte-typewriter": "^3.2.3",
 		"tippy.js": "^6.3.7"
 	}
 }

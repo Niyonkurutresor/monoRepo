@@ -23,8 +23,10 @@
 			class={` text-white fixed h-[6vh] lg:py-0 lg:h-[10vh] flex justify-between items-center w-full`}
 		>
 			<div class="absolute bg-black z-0 w-full h-full"></div>
-			<div class=" z-10 w-full h-full flex justify-between items-center px-4">
-				<span> Logo </span>
+			<div
+				class=" z-50 w-full h-full flex justify-between items-start md:items-center px-4 lg:px-12"
+			>
+				<span class=" font-mono italic font-bold text-2xl text-orange-300"> Tr </span>
 				<Navigation />
 			</div>
 		</div>

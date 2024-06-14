@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import myPic from '$lib/assets/myPic.jpg';
 	import { AwardIcon, BriefcaseIcon, CodeIcon, UserCheckIcon } from 'svelte-feather-icons';
 </script>
 
-<section class="px-8 lg:px-20 mt-[10vh] lg:mt-[15vh]">
+<section class="px-8 lg:px-20 mt-[10vh] lg:mt-[15vh]" id="about">
 	<h1 class=" text-4xl xl:text-6xl font-bold w-fit mx-auto lg:mx-0">About Me</h1>
 	<div
 		class="mt-8 flex lg:pt-[10vh] xl:pt-[10vh] flex-col gap-4 lg:gap-8 md:flex-row lg:justify-start w-full"

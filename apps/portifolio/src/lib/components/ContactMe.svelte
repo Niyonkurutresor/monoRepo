@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	export let form;
 	export let errors;
@@ -7,7 +7,7 @@
 	export let reset;
 </script>
 
-<section class="mt-[10vh] lg:mt-[15vh] w-full">
+<section class="mt-[10vh] lg:mt-[15vh] w-full" id="contact">
 	<div class="mt-[10vh] w-full">
 		<h1 class="text-4xl xl:text-6xl font-bold w-fit mx-auto mb-8">Contact me</h1>
 		<div class="px-8 py-8 w-full bg-gradient-to-tr rounded-lg">
@@ -64,4 +64,4 @@
 			</form>
 		</div>
 	</div>
-</section>
+</section> -->

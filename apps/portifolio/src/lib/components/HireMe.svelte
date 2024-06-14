@@ -1,4 +1,5 @@
 <script>
+	import { ServerIcon } from 'svelte-feather-icons';
 	import Button from './button.svelte';
 </script>
 

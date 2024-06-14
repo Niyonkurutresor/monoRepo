@@ -9,7 +9,9 @@
 	import AboutMe from '$lib/components/about.svelte';
 	import { contactMeSchema } from '$lib/schema/contactMe';
 	import { zod } from 'sveltekit-superforms/adapters';
-	import { message, superForm } from 'sveltekit-superforms/client';
+	import { superForm } from 'sveltekit-superforms/client';
+	import Intesersction from '$lib/components/observer.svelte';
+	import TypeWriter from '$lib/components/typeWriter.svelte';
 	export let data: PageData;
 	const { form, errors, enhance, constraints, reset } = superForm(data.form, {
 		id: 'checkout-payment',
@@ -44,30 +46,62 @@
 			email: undefined
 		});
 	}
+
+	// intersection obs erver
+	// const intesectionObserve = new IntersectionObserver(
+	// 	(entries) => {
+	// 		entries.forEach((entry) => {
+	// 			if (entry.isIntersecting) {
+	// 				entry.target.classList.add('show');
+	// 			} else {
+	// 				entry.target.classList.remove('show');
+	// 			}
+	// 		});
+	// 	},
+	// 	{
+	// 		threshold: 0.2
+	// 	}
+	// );
 </script>
 
 <div class=" h-fit mb-[10vh] w-full">
 	<section
 		in:fade
+		id="home"
 		class="mb-4 flex lg:px-16 lg:pt-[10vh] xl:pt-[10vh] flex-col gap-4 lg:gap-8 md:flex-row lg:justify-start w-full"
 	>
 		<!-- first section -->
 		<div
 			class="mt-8 lg:mt-0 flex flex-col gap-6 items-center md:text-start px-8 md:w-[60%] md:items-start lg:justify-center"
 		>
-			<h1 class=" text-4xl xl:text-6xl font-bold">Crafting Innovative Software Solutions</h1>
+			<h1 class=" text-4xl xl:text-6xl font-bold">
+				Crafting Innovative <br />
+				<span class=" text-orange-300">
+					{'   '}
+					<TypeWriter
+						words={['Software Solutions ']}
+						typeSpeed={120}
+						deleteSpeed={80}
+						loop={true}
+					/>
+				</span>
+			</h1>
 			<p class=" text-lg xl:text-2xl">
-				Hi, I'm <b>NIYONKURU Tresor</b>, a <b>Software developer</b>. As a skilled software
-				developer, I specialize in creating modern, responsive, and user-friendly applications that
-				solve complex problems. Explore my portfolio to see the impact I've made for my clients.
+				Hi, I'm <b>NIYONKURU Tresor</b>, a
+				<b> Software developer </b> As a skilled software developer, I specialize in creating modern,
+				responsive, and user-friendly applications that solve complex problems. Explore my portfolio
+				to see the impact I've made for my clients.
 			</p>
 			<div class=" flex gap-6">
-				<Button>Explore My Work</Button>
-				<Button>
-					<div class=" flex gap-2">
-						<span>Download CV</span><DownloadCloudIcon />
-					</div>
-				</Button>
+				<!-- <Button>Explore My Work</Button> -->
+				<a href="https://www.cloudinary.com/tres" target="_blank">
+					<Button>
+						<div class=" flex gap-2">
+							<span>My CV</span>
+							<!-- <DownloadCloudIcon /> -->
+						</div>
+					</Button>
+				</a>
 			</div>
 		</div>
 		<div class=" md:w-[40%] flex items-center justify-center">
@@ -81,11 +115,10 @@
 	<HireMe />
 	<!-- testmonials -->
 	<!-- <Testimonials /> -->
-	<section class="mt-[10vh] lg:mt-[15vh] w-full">
+	<!-- <section class="mt-[10vh] lg:mt-[15vh] w-full">
 		<div class="mt-[10vh] w-full">
 			<h1 class="text-4xl xl:text-6xl font-bold w-fit mx-auto mb-8">Contact me</h1>
 			<div class="px-8 py-8 w-full bg-gradient-to-tr rounded-lg">
-				<!-- <SuperDebug data={$form} /> -->
 				<form use:enhance method="post" action="/?/contact" class="max-w-md mx-auto">
 					<div class="mb-4">
 						<label class="block text-gray-700 text-sm font-bold mb-2" for="name"> Name: </label>
@@ -148,5 +181,5 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</section> -->
 </div>

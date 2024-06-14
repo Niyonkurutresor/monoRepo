@@ -3,6 +3,7 @@
 	import Shaka from '$lib/assets/shaka.png';
 	import CommunicationChanne from '$lib/assets/scec.png';
 	import Sabboath from '$lib/assets/sbt.png';
+	import Shoping from '$lib/assets/shoping.png';
 	export let Projects = [
 		{
 			title: 'Shaka',
@@ -34,13 +35,13 @@
 			liveLink: 'https://sbrc-fn-two.vercel.app/'
 		},
 		{
-			title: 'Project 4',
-			picture: 'project4.jpg',
+			title: 'Smart neist',
+			picture: Shoping,
 			description: 'This is the description of Project 4.',
 			ratings: 4.3,
-			tags: ['React', 'Django', 'PostgreSQL'],
-			liveLink: 'https://example.com/project4',
-			codeLink: 'https://github.com/example/project4'
+			tags: ['Next js', 'PostgreSQL']
+			// liveLink: 'https://example.com/project4',
+			// codeLink: 'https://github.com/example/project4'
 		}
 		// {
 		// 	title: 'Project 5',
@@ -75,7 +76,7 @@
 	const maxProjects = 4;
 </script>
 
-<section class="mt-[10vh] lg:mt-[15vh] w-full">
+<section class=" z-10 mt-[10vh] lg:mt-[15vh] w-full" id="projects">
 	<div class="mt-[10vh] w-full">
 		<h1 class="text-4xl xl:text-6xl font-bold w-fit mx-auto mb-8">Projects</h1>
 		<div class="px-8 py-8 w-full bg-gradient-to-tr">
@@ -85,7 +86,7 @@
 					innovative and user-friendly software solutions.
 				</p>
 				<!-- projects -->
-				<div class=" flex flex-wrap gap-1 justify-center md:justify-start mt-4">
+				<div class=" flex flex-wrap gap-1 justify-center md:gap-12 lg:gap-1 lg:justify-start mt-4">
 					{#each Projects.slice(0, showMoreProjects ? Projects.length : maxProjects) as project}
 						<ProjectCard cardData={project} />
 					{:else}

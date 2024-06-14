@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { loginSchema } from '$lib/schema/loginSchema';
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { superForm } from 'sveltekit-superforms/client';
@@ -53,4 +53,4 @@
 			{/if}
 		</div>
 	</form>
-</section>
+</section> -->
